@@ -71,3 +71,103 @@ grupos de huevos y mucho, mucho más.
   -Identificación
   -Nombre.
 </p>
+
+### Respuesta
+Ejemplo con el pokemon bulbasaur
+```Javascript
+	{
+		"id": [
+			1
+		],
+		"name": [
+			"bulbasaur"
+		],
+		"detail": {
+			"pokeslot": [
+				1
+			],
+			"poketype": [
+				"grass"
+			],
+			"pokeversion": [
+				"red-blue"
+			],
+			"base_happiness": [
+				70
+			],
+			"capture_rate": [
+				45
+			],
+			"color": [
+				"green"
+			],
+			"v_egg_groups": [
+				"monster",
+				"plant"
+			]
+		},
+		"list_evolution": [
+			"ivysaur",
+			"venusaur"
+		],
+		"evolution": "ivysaur",
+		"prevolution": ""
+	}
+```
+
+### Fuentes de datos
+
+Se consume los siguientes servicios de PokeAPI.  
+```
+'https://pokeapi.co/api/v2/evolution-chain/'
+'https://pokeapi.co/api/v2/pokemon-form/'
+'https://pokeapi.co/api/v2/pokemon-species/'
+```
+
+Y se evidencian las siguientes relaciones:
+<div align="center">
+	<img height="200" src="https://leoesleoesleo.github.io/imagenes/diangrama_relacional_poke_fastapi.PNG" alt="PokeAPI">
+</div> 
+
+### Arquitectura
+
+Requerimientos no Funcionales
+-	Las funciones son recursivas para escalar los datos en caso que el servicio reciba una lista de pokemon.
+-	Las pruebas unitarias son escalables – (pytest)
+-	La Cobertura del programa llega a un 88% (Coverage)
+-	Las Funciones y métodos están comentados
+-	El programa proporciona logs de información y errores
+-	El programa cuenta con manual de instalación
+
+#### Detalles del desarrollo
+
+<p align="justify">
+Se crean 5 funciones recursivas que consumen los servicios y se encargan de retornar los datos en JSON, si no se puede acceder 
+al servicio las funciones retornan las listas vacias.
+<ul>
+	<li><strong>list_evolution()</strong> Consume el servicio de evolution-chain y retorna dos listas, la primera es la lista de los nombres 
+		de los pokemon y la segunda otra lista con las evoluciones relacionadas. 
+	</li>
+	<li><strong>list_form_pokemon()</strong> Consume el servicio de pokemon-form y retorna 3 listas con: slot, type, version respectivamente.
+		Estos datos hacen parte de los detalles de los pokemon. 
+	</li>
+	<li><strong>list_evolution_species()</strong> Consume el servicio de pokemon-species, esta funcion relaciona la api de pokemon-form con 
+		la cadena de evolución mediante la api de especies de pokemon para consultar sus evoluciones, consulta también algunos detalles
+		de los pokémon, retorna 5 listas y un entero : base_happiness, capture_rate, color, egg_groups, id_pokemon y el id para buscar 
+		la evolución.
+		Estos datos también hacen parte de los detalles de los pokemon. 
+	</li>
+	<li><strong>evolution_prevolution()</strong> Este no consume ningún servicio porque recibe los datos para asignar la evolución y 
+		prevolución del pokemon enviado como parametro, retorna 2 cadenas : evolution y prevolution. 
+	</li>
+	<li><strong>generate_structure_api()</strong> Este no consume ningún servicio pero si utiliza las funciones descritas anteriormete para
+		armar y generar el JSON de salida. 
+	</li>
+</ul>	
+</p>
+
+## Cobertura
+
+<p align="center">
+  <a href="#"><img src="https://leoesleoesleo.github.io/imagenes/covertura_pokeapi.PNG"></a>
+</p>
