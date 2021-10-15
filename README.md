@@ -138,6 +138,9 @@ Y se evidencian las siguientes relaciones:
 
 ## Arquitectura
 
+Requerimientos Funcionales
+-	Exponer un servicio web cuyo único parámetro es el "nombre" de una búsqueda de Pokémon.
+
 Requerimientos no Funcionales
 -	Las funciones son recursivas para escalar los datos en caso que el servicio reciba una lista de pokemon.
 -	Las pruebas unitarias son escalables – (pytest)
