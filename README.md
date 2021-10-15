@@ -1,4 +1,5 @@
 
+#
 # Consumo de PokeApi con FastAPI
 Por: Leonardo Patiño Rodriguez
 <div align="center">
@@ -7,7 +8,7 @@ Por: Leonardo Patiño Rodriguez
 
 ## &nbsp; [![pyVersion37](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/download/releases/3.7/)
 
-## Manual de instalación
+# Manual de instalación
 
 ### Características
 <p align="justify">
@@ -54,9 +55,15 @@ grupos de huevos y mucho, mucho más.
     uvicorn main:app --host="0.0.0.0" --port="5000" --reload
     ```
     ```sh
-    127.0.0.1:5000
+    127.0.0.1:5000/docs
     ```
 
+<div>
+	<img height="400" src="https://leoesleoesleo.github.io/imagenes/fasapi_pokeapi.PNG" alt="PokeAPI">
+</div>  
+
+
+##
 ## MANUAL TÉCNICO
 
 ### Contexto
@@ -126,7 +133,7 @@ Se consume los siguientes servicios de PokeAPI.
 
 Y se evidencian las siguientes relaciones:
 <div align="center">
-	<img height="200" src="https://leoesleoesleo.github.io/imagenes/diangrama_relacional_poke_fastapi.PNG" alt="PokeAPI">
+	<img height="400" src="https://leoesleoesleo.github.io/imagenes/diangrama_relacional_poke_fastapi.PNG" alt="PokeAPI">
 </div> 
 
 ### Arquitectura
@@ -143,7 +150,7 @@ Requerimientos no Funcionales
 
 <p align="justify">
 Se crean 5 funciones recursivas que consumen los servicios y se encargan de retornar los datos en JSON, si no se puede acceder 
-al servicio las funciones retornan las listas vacias.
+al servicio las funciones retornan las listas vacías.
 <ul>
 	<li><strong>list_evolution()</strong> Consume el servicio de evolution-chain y retorna dos listas, la primera es la lista de los nombres 
 		de los pokemon y la segunda otra lista con las evoluciones relacionadas. 
@@ -158,9 +165,9 @@ al servicio las funciones retornan las listas vacias.
 		Estos datos también hacen parte de los detalles de los pokemon. 
 	</li>
 	<li><strong>evolution_prevolution()</strong> Este no consume ningún servicio porque recibe los datos para asignar la evolución y 
-		prevolución del pokemon enviado como parametro, retorna 2 cadenas : evolution y prevolution. 
+		prevolución del pokemon enviado como parámetro, retorna 2 cadenas : evolution y prevolution. 
 	</li>
-	<li><strong>generate_structure_api()</strong> Este no consume ningún servicio pero si utiliza las funciones descritas anteriormete para
+	<li><strong>generate_structure_api()</strong> Este no consume ningún servicio pero si utiliza las funciones descritas anteriormente  para
 		armar y generar el JSON de salida. 
 	</li>
 </ul>	
@@ -169,5 +176,5 @@ al servicio las funciones retornan las listas vacias.
 ## Cobertura
 
 <p align="center">
-  <a href="#"><img src="https://leoesleoesleo.github.io/imagenes/covertura_pokeapi.PNG"></a>
+  <a href="#"><img height="400" src="https://leoesleoesleo.github.io/imagenes/covertura_pokeapi.PNG"></a>
 </p>
