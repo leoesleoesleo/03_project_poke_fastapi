@@ -59,7 +59,7 @@ grupos de huevos y mucho, mucho más.
     ```
 
 <div>
-	<img height="400" src="https://leoesleoesleo.github.io/imagenes/fasapi_pokeapi.PNG" alt="PokeAPI">
+	<img height="450" src="https://leoesleoesleo.github.io/imagenes/fasapi_pokeapi.PNG" alt="PokeAPI">
 </div>  
 
 
@@ -122,7 +122,7 @@ Ejemplo con el pokemon bulbasaur
 	}
 ```
 
-### Fuentes de datos
+## Fuentes de datos
 
 Se consume los siguientes servicios de PokeAPI.  
 ```
@@ -136,12 +136,12 @@ Y se evidencian las siguientes relaciones:
 	<img height="400" src="https://leoesleoesleo.github.io/imagenes/diangrama_relacional_poke_fastapi.PNG" alt="PokeAPI">
 </div> 
 
-### Arquitectura
+## Arquitectura
 
 Requerimientos no Funcionales
 -	Las funciones son recursivas para escalar los datos en caso que el servicio reciba una lista de pokemon.
 -	Las pruebas unitarias son escalables – (pytest)
--	La Cobertura del programa llega a un 88% (Coverage)
+-	La Cobertura del programa llega a un 95% (Coverage)
 -	Las Funciones y métodos están comentados
 -	El programa proporciona logs de información y errores
 -	El programa cuenta con manual de instalación
