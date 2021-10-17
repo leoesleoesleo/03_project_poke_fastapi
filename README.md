@@ -143,10 +143,10 @@ Requerimientos Funcionales
 
 Requerimientos no Funcionales
 -	Las funciones son recursivas para escalar los datos en caso que el servicio reciba una lista de pokemon.
--	Las pruebas unitarias son escalables – (pytest)
--	La Cobertura del programa llega a un 95% (Coverage)
--	El programa se somete a un verificador de código fuente para una mejor calidad. 
--	Las Funciones y métodos están comentados.
+-	Las pruebas unitarias son escalables – (Pytest)
+-	La cobertura del programa llega a un 95% (Coverage)
+-	El programa se somete a un verificador de código fuente para una mejor calidad (Pylint)
+-	Las funciones y métodos están comentados.
 -	El programa proporciona logs de información y errores.
 -	El programa cuenta con manual de instalación.
 
