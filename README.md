@@ -57,9 +57,9 @@ grupos de huevos y mucho, mucho más.
     ```sh
     127.0.0.1:5000/docs
     ```
-
+#### Ejemplo
 <div>
-	<img height="450" src="https://leoesleoesleo.github.io/imagenes/fasapi_pokeapi.PNG" alt="PokeAPI">
+	<img height="400" src="https://leoesleoesleo.github.io/imagenes/fasapi_pokeapi.PNG" alt="PokeAPI">
 </div>  
 
 
