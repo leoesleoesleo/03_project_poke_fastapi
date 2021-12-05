@@ -29,7 +29,7 @@ grupos de huevos y mucho, mucho más.
 
 - Clonar repositorio
   ```
-  git clone https://github.com/leoesleoesleo/poke_fastapi.git
+  git clone https://github.com/leoesleoesleo/03_project_poke_fastapi.git
   ```
 - Crear entorno virtual
 
